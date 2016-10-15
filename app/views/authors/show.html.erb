@@ -1,0 +1,7 @@
+<h1>Current Authors</h1>
+<div>
+<%= @author.name%>
+ </div>
+<br>
+ <%= link_to "Edit Author", edit_author_path(@author) %>
+  <%= link_to "Delete", author_path(@author), method: :delete, data: {confirm: "Are you sure?"} %>

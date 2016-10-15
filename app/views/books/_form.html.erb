@@ -1,0 +1,13 @@
+<%= form_for @book do |f| %>
+	<%= f.label :title %> <br>
+	<%= f.text_field :title %> <br>
+	<br>
+		<%= f.label :author%> <br>
+	<%= f.select :author_id, options_for_select(Author.all.map{ |s|[s.name, s.id]}) %> <br>
+	<br>
+	<%= f.label :description %> <br>
+	<%= f.text_area :description %> <br>
+	<br>
+	<%= f.submit %>
+
+<% end %>
